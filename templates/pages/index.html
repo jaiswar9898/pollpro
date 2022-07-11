@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="card text-center rounded-0">
+    <div class="card-body">
+        <h1 class='mb-3 pb-3 border-bottom border-dark'>Welcome, {{ request.user.first_name }} {{ request.user.last_name }}!</h1>
+        <p class="pb-3  ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pharetra ex at finibus maximus. In sit amet fermentum arcu, in fringilla orci. Donec in convallis lectus, ut placerat urna. Donec euismod congue imperdiet. Morbi sed massa eu eros
+            ultrices commodo. Morbi pellentesque blandit massa, ac tempor enim cursus sed. Phasellus a quam ut eros efficitur egestas a ut libero. Aliquam pulvinar tellus a nibh lacinia, finibus pulvinar eros gravida.</p>
+        <hr/>
+        <div class="row justify-content-center">
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-8 col-xs-12">
+                <a class="btn btn-info btn-block rounded-pill btn-lg" href="{% url 'pollapp:index' %}">
+        Explore Questions for Polling</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
